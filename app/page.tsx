@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main>
+    <main className="mx-auto max-w-[1450px] px-4 sm:px-6">
       <div className="my-24 md:my-40">
         <h2 className="flex flex-col font-sans text-4xl font-semibold text-indigo-800 md:text-center md:text-5xl lg:text-6xl">
           Collaborate with peers{" "}
