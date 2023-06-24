@@ -6,6 +6,7 @@ import "../styles/globals.css"
 
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import NhostWrapper from "@/components/nhost-wrapper"
 import SiteHeader from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
@@ -27,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body className={cn("min-h-screen px-4 sm:px-6", fontSans.variable)}>
         <SiteHeader />
-        {children}
+        <NhostWrapper>{children}</NhostWrapper>
         <TailwindIndicator />
       </body>
     </html>
