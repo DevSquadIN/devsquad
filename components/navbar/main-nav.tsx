@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { siteConfig } from "@/config/site"
 
 import { Logo } from "../icons"
+import LoginButton from "../login-button"
 
 const MainNav = () => {
   const router = usePathname()
@@ -33,9 +34,7 @@ const MainNav = () => {
         </Link>
         {/* menu items */}
       </div>
-      {router === "/" ? (
-        <div className="font-sans antialiased">Login</div>
-      ) : null}
+      {router === "/" ? <LoginButton /> : null}
     </div>
   )
 }
