@@ -28,4 +28,24 @@ export const siteConfig = {
       href: "/settings",
     },
   ],
+
+  pathways: [
+    {
+      title: "Walk through",
+      href: "/walk-through",
+    },
+    {
+      title: "Foundation in OSS",
+      href: "/oss",
+    },
+    {
+      title: "Foundation in ReactJS",
+      href: "/react",
+    },
+
+    {
+      title: "Growth",
+      href: "/growth",
+    },
+  ],
 }

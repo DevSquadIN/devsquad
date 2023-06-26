@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head />
-      <body className={cn("min-h-screen px-4 sm:px-6", fontSans.variable)}>
+      <body className={cn("min-h-screen antialiased", fontSans.variable)}>
         <SiteHeader />
         <NhostWrapper>{children}</NhostWrapper>
         <TailwindIndicator />
