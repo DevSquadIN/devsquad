@@ -37,7 +37,7 @@ const LoginButton = () => {
               href="#"
               className="mb-4 inline-flex items-center gap-4 rounded-md border border-gray-300 bg-white px-6 py-2 font-sans font-semibold text-gray-700 antialiased shadow-lg transition-all ease-in-out hover:bg-gray-900 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-gray-300 focus-visible:ring-offset-1"
             >
-              <SecondaryNavIcons.github className="h-6 w-6" />
+              <SecondaryNavIcons.gitHub className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
               <p className="">Sign in with GitHub</p>
             </Link>
