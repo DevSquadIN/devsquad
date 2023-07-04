@@ -1,4 +1,5 @@
 import { GeneralIcons } from "./icons"
+import ProgressBar from "./progress-bar"
 
 const LessonsOverview = () => {
   return (
@@ -15,6 +16,7 @@ const LessonsOverview = () => {
                   You have completed 5% of the OSS track.{" "}
                   <span>Keep it up!</span>
                 </h3>
+                <ProgressBar />
               </div>
               <div className="grid grid-cols-10 gap-5 sm:flex sm:flex-wrap">
                 <GeneralIcons.check className="h-7 w-7 rounded-full bg-green-300 p-1 text-green-800" />
