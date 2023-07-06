@@ -1,5 +1,6 @@
 import { GeneralIcons } from "./icons"
 import ProgressBar from "./progress-bar"
+import { Separator } from "./ui/separator"
 
 const LessonsOverview = () => {
   return (
@@ -55,6 +56,39 @@ const LessonsOverview = () => {
                 <GeneralIcons.lightBulb className="h-7 w-7 rounded-full bg-gray-100 p-1 text-gray-500" />
                 <GeneralIcons.lightBulb className="h-7 w-7 rounded-full bg-gray-100 p-1 text-gray-500" />
                 <GeneralIcons.lightBulb className="h-7 w-7 rounded-full bg-gray-100 p-1 text-gray-500" />
+              </div>
+
+              <Separator className="my-4 sm:my-6" />
+              <div className="grid grid-cols-2 gap-y-4 sm:flex sm:justify-between sm:gap-y-0">
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <GeneralIcons.check className="h-6 w-6 rounded-full bg-green-300 p-1 text-green-800" />
+                  <span className="sr-only">Check Icon</span>
+                  <span className="text-sm font-medium leading-none text-gray-700">
+                    Completed ##
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <GeneralIcons.lightBulb className="h-6 w-6 rounded-full bg-gray-100 p-1 text-gray-500" />
+                  <span className="sr-only">Light Bulb</span>
+                  <span className="text-sm font-medium leading-none text-gray-700">
+                    In-progress ##
+                  </span>
+                </div>
+                <div className="flex items-center gap-1 sm:gap-2">
+                  <GeneralIcons.lock className="h-6 w-6 rounded-full bg-gray-100 p-1 text-gray-500" />
+                  <span className="sr-only">Lock</span>
+                  <span className="text-sm font-medium leading-none text-gray-700">
+                    Locked ##
+                  </span>
+                </div>
+                <div className="hidden sm:block">
+                  <Separator orientation="vertical" className="h-5" />
+                </div>
+                <div className="mr-2">
+                  <span className="text-sm font-semibold leading-none text-gray-800">
+                    Total ##
+                  </span>
+                </div>
               </div>
             </div>
             <div className="mb-6 md:mb-8">
