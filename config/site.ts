@@ -48,4 +48,12 @@ export const siteConfig = {
       href: "/growth",
     },
   ],
+
+  externalLinks: {
+    devsquad: "#",
+    github: "https://github.com/DevSquadIN/devsquad",
+    discord: "https://discord.com/",
+    twitter: "https://twitter.com/",
+    email: "email@email.com",
+  },
 }
