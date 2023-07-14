@@ -6,6 +6,7 @@ import "../styles/globals.css"
 
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
+import About from "@/components/about"
 import NhostWrapper from "@/components/nhost-wrapper"
 import SiteHeader from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -31,6 +32,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <NhostWrapper>{children}</NhostWrapper>
         <TailwindIndicator />
       </body>
+      <footer>
+        <About />
+      </footer>
     </html>
   )
 }
