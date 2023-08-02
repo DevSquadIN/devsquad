@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useAuthenticationStatus } from "@nhost/react"
 
 import { siteConfig } from "@/config/site"
 
@@ -11,6 +12,8 @@ import Logo from "../logo"
 import UserMenu from "../user-menu"
 
 const MainNav = () => {
+  const { isAuthenticated } = useAuthenticationStatus()
+
   const router = usePathname()
   return (
     <div className="mx-auto flex max-w-[1450px] items-center justify-between px-4 sm:px-6">
@@ -20,7 +23,7 @@ const MainNav = () => {
           <Logo />
         </Link>
         {/* menu items */}
-        {router !== "/" && (
+        {isAuthenticated && router !== "/" && (
           <div className=" hidden gap-4 font-sans text-lg font-medium text-gray-700 md:flex md:gap-6">
             {siteConfig.mainNav.map((item, index) => (
               <Link
@@ -38,16 +41,18 @@ const MainNav = () => {
       {router === "/" ? (
         <LoginButton />
       ) : (
-        <div className="flex items-center gap-2 sm:gap-4">
-          <div className="hidden sm:block">points</div>
-          <div className="rounded-md p-1 shadow-md">
-            <MainNavIcons.notification className="text-indigo-800 md:h-8 md:w-8" />
-            <span className="sr-only">Notification</span>
+        isAuthenticated && (
+          <div className="flex items-center gap-2 sm:gap-4">
+            <div className="hidden sm:block">points</div>
+            <div className="rounded-md p-1 shadow-md">
+              <MainNavIcons.notification className="text-indigo-800 md:h-8 md:w-8" />
+              <span className="sr-only">Notification</span>
+            </div>
+            <div>
+              <UserMenu />
+            </div>
           </div>
-          <div>
-            <UserMenu />
-          </div>
-        </div>
+        )
       )}
     </div>
   )

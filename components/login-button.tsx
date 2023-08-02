@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { useAuthenticationStatus, useProviderLink } from "@nhost/react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,14 +17,29 @@ import { SecondaryNavIcons } from "./icons"
 import Logo from "./logo"
 
 const LoginButton = () => {
+  const { github } = useProviderLink()
+
+  const { isAuthenticated } = useAuthenticationStatus()
+
+  if (isAuthenticated) {
+    console.log("user authenticated")
+  } else {
+    console.log("User not authenticated")
+  }
+
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button
+          asChild
           className="font-sans text-base font-semibold text-gray-700 antialiased hover:bg-indigo-100 hover:text-indigo-700"
           variant="ghost"
         >
-          Login
+          {isAuthenticated ? (
+            <Link href="/dashboard">Dashboard</Link>
+          ) : (
+            <Link href={github}>Login</Link>
+          )}
         </Button>
       </DialogTrigger>
       <DialogContent>

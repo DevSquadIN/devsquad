@@ -1,7 +1,6 @@
 "use client"
 
-import { NhostProvider } from "@nhost/nextjs"
-import { NhostClient } from "@nhost/react"
+import { NhostClient, NhostProvider } from "@nhost/react"
 import { NhostApolloProvider } from "@nhost/react-apollo"
 
 const nhost = new NhostClient({
