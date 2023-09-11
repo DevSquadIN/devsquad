@@ -34,7 +34,10 @@ const LoginButton = () => {
       ) : (
         <Dialog>
           <DialogTrigger asChild>
-            <Button className="font-sans text-base font-semibold text-gray-700 antialiased hover:bg-indigo-100 hover:text-indigo-700">
+            <Button
+              variant="ghost"
+              className="font-sans text-base font-semibold text-gray-700 antialiased hover:bg-indigo-100 hover:text-indigo-700"
+            >
               Login
             </Button>
           </DialogTrigger>
