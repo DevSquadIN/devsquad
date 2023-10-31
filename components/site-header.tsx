@@ -6,8 +6,6 @@ const SiteHeader = () => {
     <header>
       {/* Conditionally renders on /index and other pages */}
       <MainNav />
-      {/* Only present in /dashboard */}
-      <SecondaryNav />
     </header>
   )
 }

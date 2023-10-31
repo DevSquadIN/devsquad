@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { useSignOut } from "@nhost/react"
 
 import { siteConfig } from "@/config/site"
 
@@ -14,6 +17,8 @@ import {
 } from "./ui/dropdown-menu"
 
 const UserMenu = () => {
+  const { signOut } = useSignOut()
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -57,7 +62,14 @@ const UserMenu = () => {
             <Link href={item.href}>{item.title}</Link>
           </DropdownMenuItem>
         ))}
-        <DropdownMenuItem className="font-sans">Sign Out</DropdownMenuItem>
+        <DropdownMenuItem asChild className="font-sans">
+          <button
+            className="w-full hover:cursor-pointer"
+            onClick={() => signOut()}
+          >
+            Sign Out
+          </button>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
