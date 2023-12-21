@@ -13,6 +13,7 @@ import UserMenu from "../user-menu"
 
 const MainNav = () => {
   const { isAuthenticated } = useAuthenticationStatus()
+  console.log(isAuthenticated)
 
   const router = usePathname()
   return (
