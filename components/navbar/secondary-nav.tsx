@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
+import { siteConfig } from "@/config/site"
+
 import { MainNavIcons, SecondaryNavIcons } from "../icons"
 
 const SecondaryNav = () => {
@@ -21,7 +23,7 @@ const SecondaryNav = () => {
             </div>
             <div className="flex gap-2 sm:gap-3">
               <Link
-                href="https://github.com/DevSquadIN/devsquad"
+                href={siteConfig.externalLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -29,7 +31,7 @@ const SecondaryNav = () => {
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
-                href="https://discord.com/"
+                href={siteConfig.externalLinks.discord}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -37,7 +39,7 @@ const SecondaryNav = () => {
                 <span className="sr-only">Discord</span>
               </Link>
               <Link
-                href="https://twitter.com/"
+                href={siteConfig.externalLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
               >
