@@ -11,7 +11,7 @@ export default function Home() {
         <p className="mx-auto my-12 max-w-4xl font-serif text-indigo-700 sm:text-lg md:text-center">
           We are not reinventing the wheel. Instead we&apos;ve curated resources
           and developed micro-challenges to give you the best learning
-          experience. We&apos;ve also build a community of peers and mentors so
+          experience. We&apos;ve also built a community of peers and mentors so
           that you can build cool projects together.{" "}
         </p>
         {/* TODO: react hook form */}
